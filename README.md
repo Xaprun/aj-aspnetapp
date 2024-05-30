@@ -126,3 +126,21 @@ docker tag aj-aspnetapp itsaj/aj-aspnetapp:v1.0
 docker push itsaj/aj-aspnetapp:v1.0
 docker tag itsaj/aj-aspnetapp:v1.0 xaprun/aj-aspnetapp:v1.0
 docker push xaprun/aj-aspnetapp:v1.0
+
+# github
+…or create a new repository on the command line
+echo "# aj-aspnetapp" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:Xaprun/aj-aspnetapp.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin git@github.com:Xaprun/aj-aspnetapp.git
+git branch -M main
+git push -u origin main
+
+# powershell 
+ls -Path $env:USERPROFILE\.ssh
+ssh-keygen -t rsa -b 4096 -C "jed.adamski@gmail.com"
