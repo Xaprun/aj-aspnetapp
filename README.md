@@ -142,6 +142,7 @@ git branch -M main
 git push -u origin main
 
 # powershell 
+```console
 Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 Get-Service -Name ssh-agent
 Set-Service -Name ssh-agent -StartupType Manual
@@ -151,9 +152,9 @@ ssh -T git@github.com
 ssh-add -l
 Get-Content $env:USERPROFILE\.ssh\id_rsa.pub | Set-Clipboard
 
-
 ls -Path $env:USERPROFILE\.ssh
 ssh-keygen -t rsa -b 4096 -C "jed.adamski@gmail.com"
 
 git config --global user.name "Jedrzej Adamski"
+```
 git config --global user.email "jed.adamski@gmail.com"
