@@ -148,6 +148,8 @@ Set-Service -Name ssh-agent -StartupType Manual
 Start-Service -Name ssh-agent
 ssh-add $env:USERPROFILE\.ssh\id_rsa
 ssh -T git@github.com
+ssh-add -l
+Get-Content $env:USERPROFILE\.ssh\id_rsa.pub | Set-Clipboard
 
 
 ls -Path $env:USERPROFILE\.ssh
