@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   build:
@@ -38,7 +35,7 @@ jobs:
         if: success()
         run: |
           mkdir -p artifacts
-          cp -r **/bin/Release/* artifacts/
+          find . -type d -name 'Release' -exec cp -r {}/. artifacts/ \;
         shell: bash
 
       - name: Upload build artifacts
@@ -52,7 +49,7 @@ jobs:
         if: success()
         run: |
           mkdir -p test-results
-          cp -r **/TestResults/* test-results/
+          find . -type d -name 'TestResults' -exec cp -r {}/. test-results/ \;
         shell: bash
 
       - name: Upload test results
