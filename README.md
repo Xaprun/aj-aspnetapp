@@ -125,7 +125,7 @@ docker login
 docker tag aj-aspnetapp itsaj/aj-aspnetapp:v1.0
 docker push itsaj/aj-aspnetapp:v1.0
 docker tag itsaj/aj-aspnetapp:v1.0 xaprun/aj-aspnetapp:v1.0
-docker push xaprun/aj-aspnetapp:v1.0
+docker push xaprun/aj-aspnetapp-gh:v1.0
 
 # github
 …or create a new repository on the command line
