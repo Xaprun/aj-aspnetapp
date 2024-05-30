@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\VSC-LTW2\\LEARN\\DEV\\C\\dotnet-docker\\dotnet-docker\\samples\\aj-aspnetapp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5FDCC1ED-9F59-47ED-969D-5E463CDD8D52}|aspnetapp\\aspnetapp.csproj|c:\\vsc-ltw2\\learn\\dev\\c\\dotnet-docker\\dotnet-docker\\samples\\aj-aspnetapp\\aspnetapp\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5FDCC1ED-9F59-47ED-969D-5E463CDD8D52}|aspnetapp\\aspnetapp.csproj|solutionrelative:aspnetapp\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\VSC-LTW2\\LEARN\\DEV\\C\\dotnet-docker\\dotnet-docker\\samples\\aj-aspnetapp\\aspnetapp\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "aspnetapp\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\VSC-LTW2\\LEARN\\DEV\\C\\dotnet-docker\\dotnet-docker\\samples\\aj-aspnetapp\\aspnetapp\\Pages\\Index.cshtml",
+              "RelativeToolTip": "aspnetapp\\Pages\\Index.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-30T10:11:34.497Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
