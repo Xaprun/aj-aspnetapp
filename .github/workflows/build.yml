@@ -73,5 +73,5 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t xaprun/aj-aspnetapp-gh:v1.0 .
-          docker push xaprun/aj-aspnetapp-alpine-k8s-gh:v0.9test
+          docker build -t xaprun/aj-aspnetapp-alpine-k8s-gh:v0.9-test .
+          docker push xaprun/aj-aspnetapp-alpine-k8s-gh:v0.9-test
