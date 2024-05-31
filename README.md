@@ -154,7 +154,6 @@ Get-Content $env:USERPROFILE\.ssh\id_rsa.pub | Set-Clipboard
 
 ls -Path $env:USERPROFILE\.ssh
 ssh-keygen -t rsa -b 4096 -C "jed.adamski@gmail.com"
-
 git config --global user.name "Jedrzej Adamski"
-```
 git config --global user.email "jed.adamski@gmail.com"
+```
