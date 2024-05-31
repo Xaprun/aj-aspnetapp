@@ -3,7 +3,7 @@ name: Build, Test, and Deploy .NET 8 Application
 on:
   push:
     branches:
-      - main
+     # - main
   pull_request:
     branches:
       - main
