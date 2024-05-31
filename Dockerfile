@@ -20,5 +20,6 @@ FROM mcr.microsoft.com/dotnet/nightly/aspnet:8.0-alpine-composite
 EXPOSE 8080
 WORKDIR /app
 COPY --from=build /app .
+HEALTHCHECK CMD curl -sf --show-error http://localhost:80/healthz || exit 1
 USER $APP_UID
 ENTRYPOINT ["./aspnetapp"]

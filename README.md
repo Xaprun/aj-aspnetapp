@@ -51,6 +51,7 @@ You can built an image using one of the provided Dockerfiles.
 
 docker build --pull -f Dockerfile.alpine -t aj-aspnetapp . 
 docker run --rm -it -p 8000:8080 -e ASPNETCORE_HTTP_PORTS=8080 aj-aspnetapp
+docker run --rm -it -p 8000:8080 -e ASPNETCORE_HTTP_PORTS=8080 xaprun/aj-aspnetapp-gh:v1.0
 ```
 
 You should see the following console output as the application starts:
