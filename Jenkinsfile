@@ -4,7 +4,7 @@ pipeline {
   environment {
     DOTNET_VERSION = '8.0.x'
     DOCKER_CREDENTIALS_ID = 'docker-hub-credentials' // Jenkins credential ID for Docker Hub login
-    DOTNET_ROOT = tool name: 'dotnet', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
+    DOTNET_ROOT = tool name: 'dotnet'//, type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
   }
 
   stages {
