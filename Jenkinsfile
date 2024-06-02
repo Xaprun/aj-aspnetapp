@@ -30,18 +30,30 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building...'
+         // Build the project
+        sh '${DOTNET_ROOT}/dotnet build --configuration Release'
       }
     }
 
     stage('Test') {
       steps {
         echo 'Testing...'
+        sh '${DOTNET_ROOT}/dotnet test --no-build --configuration Release'
       }
     }
+
+     stage('Publish') {
+            steps {
+                // Publish the application
+                sh '${DOTNET_ROOT}/dotnet publish --configuration Release --output ./publish'
+            }
+        }
     
     stage('Package') {
       steps {
         echo 'Archiving...'
+        // Archive the published application
+        archiveArtifacts artifacts: 'publish/**/*', allowEmptyArchive: true
       }
     }
     
@@ -51,4 +63,10 @@ pipeline {
       }
     }
   }
+   post {
+        always {
+            // Clean up workspace
+            cleanWs()
+        }
+    }
 }
