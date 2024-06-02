@@ -4,6 +4,7 @@ pipeline {
   environment {
     DOTNET_VERSION = '8.0.x'
     DOCKER_CREDENTIALS_ID = 'docker-hub-credentials' // Jenkins credential ID for Docker Hub login
+    DOTNET_ROOT = tool name: 'dotnet', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
   }
 
   stages {
@@ -18,28 +19,11 @@ pipeline {
       }
     }
     
-    stage('Install Dependencies') {
-      steps {
-        echo 'Installing wget...'
-        sh '''
-          if ! command -v wget &> /dev/null
-          then
-            echo "wget could not be found, installing it..."
-            sudo apt-get update && sudo apt-get install -y wget
-          else
-            echo "wget is already installed"
-          fi
-        '''
-      }
-    }
-
-    stage('Setup .NET SDK') {
-      steps {
-        sh 'wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh'
-        sh 'chmod +x dotnet-install.sh'
-        sh './dotnet-install.sh -c $DOTNET_VERSION'
-        sh 'export PATH="$PATH:$HOME/.dotnet"'
-      }
+    stage('Restore') {
+            steps {
+                // Restore dependencies
+                sh '${DOTNET_ROOT}/dotnet restore'
+            }
     }
 
     stage('Build') {
