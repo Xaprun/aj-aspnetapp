@@ -15,8 +15,20 @@ pipeline {
               ls
               '''
             sh 'printenv'
-
           }
+        }
+
+        script {
+          sh 'end'
+        }
+
+        stage('Setup .NET SDK') {
+            steps {
+                sh 'wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh'
+                sh 'chmod +x dotnet-install.sh'
+                sh './dotnet-install.sh -c $DOTNET_VERSION'
+                sh 'export PATH="$PATH:$HOME/.dotnet"'
+            }
         }
 
         stage('Build') {
