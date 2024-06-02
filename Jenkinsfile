@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'ubuntu-latest'
-    }
+    agent any
 
     environment {
         DOTNET_VERSION = '8.0.x'
@@ -9,15 +7,36 @@ pipeline {
     }
 
     stages {
+        stage('Prep') {
+          steps {
+            echo 'Preparing...'
+            sh '''pwd
+                  ls'''
+          }
+        }
+
+        stage('Build') {
+          steps {
+            echo 'Building...'
+          }
+        }
+
         stage('Test') {
-            steps {
-                echo "Start from Dockerfile"
-            }
+          steps {
+            echo 'Testing...'
+          }
         }
-        stage('Checkout code') {
-            steps {
-                echo "Start from Dockerfile"
-            }
+    
+        stage('Package') {
+          steps {
+            echo 'Archiving...'
+          }
         }
-    }
+    
+        stage('Publish') {
+          steps {
+            echo 'Publishing...'
+          }
+        }
+      }
 }
