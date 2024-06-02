@@ -15,10 +15,6 @@ pipeline {
               ls
               '''
             sh 'printenv'
-            script {
-            sh 'end'
-            sh 'end'
-          }
         }
     }
     
