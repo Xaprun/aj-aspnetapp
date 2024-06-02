@@ -22,7 +22,7 @@ pipeline {
     stage('Restore') {
             steps {
                 // Restore dependencies
-                sh '${DOTNET_ROOT}/dotnet restore'
+                sh 'dotnet restore'
             }
     }
 
