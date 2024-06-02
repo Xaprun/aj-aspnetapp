@@ -15,8 +15,11 @@ pipeline {
               ls
               '''
             echo 'Env variables check'
-            echo $DOTNET_VERSION
-            echo $DOCKER_CREDENTIALS_ID
+            def envVars = System.getenv()
+            envVars.each { 
+              key, value ->
+              println "${key}: ${value}"
+            }
             echo 'checkout scm'
             checkout scm
           }
