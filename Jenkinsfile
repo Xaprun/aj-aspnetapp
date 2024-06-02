@@ -15,13 +15,6 @@ pipeline {
               ls
               '''
             echo 'Env variables check'
-            def envVars = System.getenv()
-            envVars.each { 
-              key, value ->
-              println "${key}: ${value}"
-            }
-            echo 'checkout scm'
-            checkout scm
           }
         }
 
