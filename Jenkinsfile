@@ -20,8 +20,6 @@ pipeline {
               key, value ->
               println "${key}: ${value}"
             }
-            echo 'checkout scm'
-            checkout scm
           }
         }
 
