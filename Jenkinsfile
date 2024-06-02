@@ -10,8 +10,19 @@ pipeline {
         stage('Prep') {
           steps {
             echo 'Preparing...'
-            sh '''pwd
-                  ls'''
+            sh '''
+              pwd
+              ls
+              '''
+          }
+          steps {
+            echo 'Env variables check'
+            echo $DOTNET_VERSION
+            echo $DOCKER_CREDENTIALS_ID
+          }
+            steps {
+            echo 'checkout scm'
+            checkout scm
           }
         }
 
