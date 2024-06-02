@@ -25,7 +25,7 @@ pipeline {
           if ! command -v wget &> /dev/null
           then
             echo "wget could not be found, installing it..."
-            apt-get update && apt-get install -y wget
+            sudo apt-get update && sudo apt-get install -y wget
           else
             echo "wget is already installed"
           fi
