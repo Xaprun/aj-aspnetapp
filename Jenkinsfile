@@ -15,10 +15,10 @@ pipeline {
               ls
               '''
             echo 'Env variables check'
-            def envVars = System.getenv()
-            envVars.each { 
-              key, value ->
-              println "${key}: ${value}"
+             script {
+                    // Iterate over the environment variables and print each one
+                    env.each { key, value ->
+                    echo "${key}: ${value}"
             }
           }
         }
