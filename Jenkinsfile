@@ -19,6 +19,7 @@ pipeline {
                     // Iterate over the environment variables and print each one
                     env.each { key, value ->
                     echo "${key}: ${value}"
+                    }
             }
           }
         }
