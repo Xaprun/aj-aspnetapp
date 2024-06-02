@@ -14,8 +14,7 @@ pipeline {
               pwd
               ls
               '''
-            echo 'Env in Win Job Worker'
-            bat 'set'
+            sh 'printenv'
 
           }
         }
