@@ -14,8 +14,6 @@ pipeline {
                 echo "Start from Dockerfile"
             }
         }
-    }
-    tages {
         stage('Checkout code') {
             steps {
                 echo "Start from Dockerfile"
