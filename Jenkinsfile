@@ -15,12 +15,12 @@ pipeline {
               ls
               '''
             sh 'printenv'
+            script {
+            sh 'end'
+            sh 'end'
           }
         }
 
-        script {
-          sh 'end'
-        }
 
         stage('Setup .NET SDK') {
             steps {
