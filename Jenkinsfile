@@ -57,13 +57,8 @@ pipeline {
       }
     }
     
-    stage('Publish') {
-      steps {
-        echo 'Publishing...'
-      }
-    }
-  }
-   post {
+  } 
+  post {
         always {
             // Clean up workspace
             cleanWs()
