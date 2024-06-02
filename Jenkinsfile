@@ -5,6 +5,7 @@ pipeline {
     DOTNET_VERSION = '8.0.x'
     DOCKER_CREDENTIALS_ID = 'docker-hub-credentials' // Jenkins credential ID for Docker Hub login
     DOTNET_ROOT = tool name: 'dotnet'//, type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
+     DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = 'true'
   }
 
   stages {
@@ -22,7 +23,7 @@ pipeline {
     stage('Restore') {
             steps {
                 // Restore dependencies
-                sh 'dotnet restore'
+                sh '${DOTNET_ROOT}/dotnet restore'
             }
     }
 
